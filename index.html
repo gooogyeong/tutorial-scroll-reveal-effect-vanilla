@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reveal on scroll vanilla</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <section>
+            <h1>Reveal Elements On Scroll</h1>
+        </section>
+
+        <section>
+            <div class="container reveal">
+                <h2>My Title</h2>
+                <div class="cards">
+                    <div class="text-card">
+                        <h3>Title</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null 
+                        </p>
+                    </div>
+                    <div class="text-card">
+                        <h3>Title</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null 
+                        </p>
+                    </div>
+                    <div class="text-card">
+                        <h3>Title</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>  
+              
+        <section>
+            <div class="container reveal">
+                <h2>My Title</h2>
+                <div class="cards">
+                    <div class="text-card">
+                        <h3>Title</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null 
+                        </p>
+                    </div>
+                    <div class="text-card">
+                        <h3>Title</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null 
+                        </p>
+                    </div>
+                    <div class="text-card">
+                        <h3>Title</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </section> 
+
+        <section>
+            <div class="container reveal">
+                <h2>My Title</h2>
+                <div class="cards">
+                    <div class="text-card">
+                        <h3>Title</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null 
+                        </p>
+                    </div>
+                    <div class="text-card">
+                        <h3>Title</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null 
+                        </p>
+                    </div>
+                    <div class="text-card">
+                        <h3>Title</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </section> 
+
+        <script type="text/javascript">
+            window.addEventListener('scroll', reveal);
+
+            function reveal () {
+                const reveals = document.querySelectorAll('.reveal');
+
+                for (let i = 0; i < reveals.length; i++) {
+                    let windowHeight = window.innerHeight;
+                    let revealTop = reveals[i].getBoundingClientRect().top;
+                    let revealPoint = 150;
+
+                    if (revealTop < windowHeight - revealPoint) {
+                        reveals[i].classList.add('active');
+                    } else {
+                        reveals[i].classList.remove('active');
+                    }
+                }
+            }
+
+        </script>
+    </body>
+</html>
