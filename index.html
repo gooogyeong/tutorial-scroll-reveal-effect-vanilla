@@ -96,6 +96,9 @@
         <script type="text/javascript">
             window.addEventListener('scroll', reveal);
 
+            // what does the follwoing function do?
+            // it adds the class active to the elements with the class reveal when the top of the element is less than the window height minus 150px
+            // if the top of the element is greater than the window height minus 150px, the class active is removed
             function reveal () {
                 const reveals = document.querySelectorAll('.reveal');
 
@@ -105,8 +108,10 @@
                     let revealPoint = 150;
 
                     if (revealTop < windowHeight - revealPoint) {
+                        // by scrolling, element reaches bottom 150px of the window (becoming visible)
                         reveals[i].classList.add('active');
                     } else {
+                        // element is below bottom 150px of the window (not visible)
                         reveals[i].classList.remove('active');
                     }
                 }
